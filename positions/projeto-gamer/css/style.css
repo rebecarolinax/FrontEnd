@@ -1,0 +1,762 @@
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: TitiliumBlack;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+    font-family: TitiliumBold;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "TitiliumRegular";
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Classes Genéricas */
+.layout-grid {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    /* border: 1px solid salmon; */
+}
+
+.mostrar-menu {
+    left: 0 !important;
+}
+
+.mostrar-usuarios {
+    right: 0 !important;
+}
+
+/* justify content + align items */
+.alinhamento-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+body {
+    color: white;
+}
+
+/* Mobile First */
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    background-color: #1B1426;
+}
+
+header .header-top {
+    display: none;
+}
+
+header .header-bottom {
+    height: 60px;
+}
+
+header .logo {
+    width: 86px;
+}
+
+
+header .header-bottom nav {
+    position: fixed;
+    top: 60px;
+    left: -80vw;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 80vw;
+    height: calc(100vh - 60px);
+    padding-bottom: 20px;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+
+    transition: left 0.4s;
+}
+
+
+header .header-bottom nav>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+    color: white;
+    font-size: 15px;
+    font-family: Inter;
+    text-decoration: none;
+    border-bottom: 2px solid #F9AA01;
+}
+
+header .header-bottom nav a:last-of-type {
+    border-bottom: none;
+}
+
+header .header-bottom nav .midias-sociais {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+header .menu-usuarios {
+    position: fixed;
+    top: 60px;
+    right: -20vw;
+    width: 66px;
+    height: 170px;
+
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+
+    transition: right 0.4s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* MAIN */
+
+main {
+    margin-top: 60px;
+}
+
+/* Banner */
+
+main .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 606px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-image: url(../assets/images/banner-principal.png);
+    background-size: cover;
+    /* background-position: bottom; */
+    background-repeat: no-repeat;
+}
+
+main .banner h1 {
+    font-family: "TitiliumBlack";
+    font-size: 40px;
+    text-shadow: 5px 0px 20px red;
+}
+
+main .banner a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 40px;
+    font-family: "TitiliumBold";
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    background-color: #F9AA01;
+    border-radius: 8px;
+}
+
+/* Sessão Jogos */
+
+main .jogos {
+    width: 100%;
+    height: 590px;
+    background-color: #1B1426;
+}
+
+main .jogos .jogos-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main .progamer {
+    width: 100%;
+    height: 1535px;
+    background-color: #F9AA01;
+}
+
+main .progamer-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .progamer-titulo {
+    /* width: 366px; */
+    height: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.progamer-titulo h2 {
+    font-size: 18px;
+    font-family: "TitiliumBlack";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #1B1426;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 204px;
+    border-bottom: 2px solid #1B1426;
+}
+
+main .progamer article {
+    position: relative;
+    bottom: 100px;
+
+}
+
+.progamer article>img {
+    width: 314px;
+    height: 511px;
+}
+
+main .progamer article .jogos-diferentes,
+main .progamer article .professores {
+    position: absolute;
+    top: 150px;
+    width: 231px;
+    height: 300px;
+    background-image: linear-gradient(to bottom, rgba(48, 8, 111, 0.5), rgba(122, 49, 236, 0.3));
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+}
+
+.jogos-diferentes {
+    right: 0;
+}
+
+.jogos-diferentes img,
+.professores img {
+    position: relative;
+    left: calc(50% - 48px);
+    top: 30px;
+    width: 96px;
+    height: auto;
+}
+
+.jogos-diferentes h2,
+.professores h2 {
+    margin: 40px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    font-family: "TitiliumBlack";
+    font-size: 18px;
+}
+
+.jogos-diferentes p,
+.professores p {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 13px;
+    text-align: justify;
+    line-height: 18px;
+    font-family: "Quicksand";
+    /* font-family: ; */
+}
+
+main .news {
+    background-image: url(../assets/images/backnoticiasmobile.png);
+    background-size: cover;
+    width: 100%;
+    height: 3675px;
+    display: flex;
+    align-items: center;
+}
+
+main .news h1 {
+    font-family: "TitiliumBlack";
+    text-transform: uppercase;
+}
+
+.news-titulo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#palco {
+    width: 285px;
+}
+
+#campeao-verde {
+    width: 285px;
+}
+
+#campeao-amarelo {
+    width: 285px;
+}
+
+#show {
+    width: 285px;
+}
+
+#campeao-amarelo2 {
+    width: 285px;
+}
+
+#show2 {
+    width: 285px;
+}
+
+#palco2 {
+    width: 285px;
+}
+
+#campeao-verde2 {
+    width: 285px;
+}
+
+.news h1 {
+    font-size: 40px;
+    font-family: "TitiliumBlack";
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.line2 {
+    width: 204px;
+    border-bottom: 2px solid #F9AA01;
+    display: flex;
+    justify-content: center;
+}
+
+main .news-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.news article {
+    margin-top: 50px;
+    width: 285px;
+    height: 387px;
+    background-image: linear-gradient(to bottom, rgba(37, 26, 52, 0.3), rgba(5, 1, 12, 0.8));
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.news article h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-family: "TitiliumBold";
+    padding: 20px 0 10px 0;
+}
+
+.news article p {
+    display: flex;
+    margin: 15px auto;
+    width: 80%;
+    font-size: 16px;
+    text-align: justify;
+    /* line-height: 23px; */
+    font-family: "Quicksand";
+}
+
+/* FOOTER */
+
+footer {
+    background-image: url(../assets/images/backgroung_footer\ mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1531px;
+    box-shadow: inset 0 50px 80px rgb(0, 0, 0, 0.9);
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+.logo-footer img {
+    width: 110px;
+    height: 32px;
+
+}
+
+.logo-footer p {
+    font-size: 14px;
+    font-family: "Quicksand";
+    line-height: 20px;
+    text-align: justify;
+}
+
+.icons-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-footer .icons-footer img {
+    width: 40px;
+    height: 40px;
+}
+
+h6 {
+    font-size: 30px;
+    font-family: "TitiliumBlack";
+    margin-top: 150px;
+}
+
+hr {
+    width: 102px;
+    border-bottom: 2px solid #F9AA01
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.links a {
+    padding: 0px 50px 20px 0px;
+    color: white;
+    text-decoration: none;
+}
+
+.links-uteis {
+    font-family: "TitiliumBold";
+}
+
+.footer-contatos {
+    font-family: "TitiliumBold";
+}
+
+.footer-contatos h5 {
+    color: #F9AA01;
+    font-size: 16px;
+    font-family: "TitiliumBold";
+    padding-top: 30px;
+}
+
+.linha-footer {
+    margin-top: 70px;
+    gap: 10px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.1));
+    width: 285px;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.linha-footer input {
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: "TitiliumRegular"
+}
+
+.linha-footer input::placeholder {
+    color: white;
+}
+
+.footer-news button {
+    width: 285px;
+    height: 40px;
+    background-color: #F9AA01;
+    color: #1B1426;
+    border-radius: 8px;
+    font-size: 24px;
+    font-family: "TitiliumBold";
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Desktop >= 1200px*/
+@media screen and (min-width: 1200px) {
+    .layout-grid {
+        width: 100%;
+        max-width: 1200px;
+
+    }
+
+    /* header */
+    header {
+        position: static;
+        height: 140px;
+    }
+
+    header .header-top {
+        display: block;
+        height: 50px;
+        border-bottom: 2px solid #F9AA01;
+
+    }
+
+    .header-top .contatos {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        width: 420px;
+        font-family: "Inter";
+        font-size: 14px;
+        font-weight: 400px;
+    }
+
+    header .header-top .contatos>a {
+        display: flex;
+        gap: 10px;
+        width: 200px;
+        align-items: center;
+    }
+
+    .header-top .midias-sociais {
+        display: flex;
+        justify-content: space-between;
+        width: 140px;
+    }
+
+    /* esconde os elementos desnecessários */
+    header .header-bottom .menu-hamburger,
+    header .header-bottom .menu-pontinhos,
+    header .header-bottom nav .phone,
+    header .header-bottom nav .mail,
+    header .header-bottom nav .midias-sociais {
+        display: none;
+    }
+
+    header .logo {
+        width: 200px;
+    }
+
+    header .header-bottom {
+        height: 90px;
+    }
+
+    header .header-bottom nav {
+        position: static;
+        width: 440px;
+        height: 50px;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 0;
+        justify-content: space-between;
+    }
+
+    header .header-bottom nav a {
+        font-size: 14px;
+        padding: 0;
+        border: none;
+    }
+
+    .header-bottom .menu-usuarios {
+        position: static;
+        width: 140px;
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+        background-color: transparent;
+        background-image: none;
+    }
+
+    /* MAIN */
+    main {
+        margin-top: 0;
+    }
+
+    main .banner {
+        background-image: url(../assets/images/Banner_background_1desk.png);
+        height: 722px;
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+    main .banner h1 {
+        font-size: 80px;
+        font-family: "TitiliumBlack";
+        font-weight: 900;
+        margin-bottom: 100px;
+    }
+
+    main .jogos {
+        height: 500px;
+    }
+
+    main .jogos .jogos-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main .jogos img {
+        width: 513px;
+        height: 313px;
+    }
+
+    main .progamer {
+        height: 1000px;
+    }
+
+    main .progamer-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .progamer-titulo h2 {
+        font-size: 40px;
+        letter-spacing: 15px;
+        margin-bottom: 50px;
+    }
+
+    main .progamer article {
+        width: 585px;
+        height: 700px;
+        margin-top: 100px;
+        bottom: 0;
+    }
+
+    .progamer article>img {
+        width: 521px;
+        height: 692px;
+    }
+
+    main .progamer article .jogos-diferentes,
+    main .progamer article .professores {
+        top: 200px;
+        width: 360px;
+        height: 440px;
+    }
+
+    .jogos-diferentes img,
+    .professores img {
+        left: calc(50% - 72px);
+        top: 40px;
+        width: 144px;
+    }
+
+    .jogos-diferentes h2,
+    .professores h2 {
+        margin: 80px 0 20px 0;
+        font-size: 25px;
+    }
+
+    .jogos-diferentes p,
+    .professores p {
+        font-size: 16px;
+        text-align: justify;
+        line-height: 25px;
+        /* font-family: ; */
+    }
+
+    main .news {
+        background-image: url(../assets/images/backgrund_notícias.png);
+        height: 1175px;
+    }
+
+    main .news-flex {
+        flex-direction: row;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background-image: url(../assets/images/footerdesk.png);
+        height: 520px;
+    }
+
+    .footer-flex {
+        flex-direction: row;
+    }
+
+    .logo-footer {
+        margin: 100px 0;
+        align-items: flex-start;
+        width: 285px;
+
+    }
+
+    .logo-footer img {
+        width: 196px;
+        height: 56px;
+        margin-bottom: 30px;
+    }
+
+    .logo-footer p {
+        line-height: 25px;
+        font-size: 16px;
+    }
+
+    .icons-footer {
+        width: 206px;
+        margin-top: 20px;
+    }
+
+    h6 {
+        margin-top: 100px;
+    }
+
+    .links {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .footer-contatos,
+    .links-uteis,
+    .footer-news {
+        margin-left: 60px;
+    }
+}
