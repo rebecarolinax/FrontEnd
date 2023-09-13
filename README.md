@@ -1,5 +1,5 @@
 # Sprint ΙΙ
-Repositório com os conteúdos desenvolvidos nas aulas de Banco De Dados
+Repositório com os conteúdos desenvolvidos nas aulas de FrontEnd
 
 - HTML
   - Semântica
