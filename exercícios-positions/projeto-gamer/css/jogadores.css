@@ -1,0 +1,623 @@
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: TitiliumBlack;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+    font-family: TitiliumBold;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "TitiliumRegular";
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Classes Genéricas */
+.layout-grid {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    /* border: 1px solid salmon; */
+}
+
+.mostrar-menu {
+    left: 0 !important;
+}
+
+.mostrar-usuarios {
+    right: 0 !important;
+}
+
+/* justify content + align items */
+.alinhamento-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    color: white;
+}
+
+/* MOBILE FIRST */
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    background-color: #1B1426;
+}
+
+header .header-top {
+    display: none;
+}
+
+header .header-bottom {
+    height: 60px;
+}
+
+header .logo {
+    width: 86px;
+}
+
+header .header-bottom nav {
+    position: fixed;
+    top: 60px;
+    left: -80vw;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 80vw;
+    height: calc(100vh - 60px);
+    padding-bottom: 20px;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+
+    transition: left 0.4s;
+}
+
+header .header-bottom nav>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+    color: white;
+    font-size: 15px;
+    font-family: Inter;
+    text-decoration: none;
+    border-bottom: 2px solid #F9AA01;
+}
+
+header .header-bottom nav a:last-of-type {
+    border-bottom: none;
+}
+
+header .header-bottom nav .midias-sociais {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+header .menu-usuarios {
+    position: fixed;
+    top: 60px;
+    right: -20vw;
+    width: 66px;
+    height: 170px;
+
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+
+    transition: right 0.4s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* MAIN */
+
+main {
+    height: 1403px;
+    /* banner login mobile */
+    background-image: url(../assets/images/jogadoresmobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+main form {
+    width: 335px;
+    height: 650px;
+    border: solid 1px transparent;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.8), rgb(60, 3, 65, 0.6)), radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: "TitiliumBlack";
+    margin: 20px 0 5px 0;
+}
+
+form .line {
+    width: 250px;
+    border-bottom: 2px solid #F9AA01;
+    margin-bottom: 100px;
+}
+
+form .linha>div {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.1));
+    width: 273px;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+form .linha input {
+    width: 85%;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.linha input::placeholder {
+    font-size: 16px;
+    font-family: "TitiliumRegular";
+}
+
+.linha input::placeholder {
+    color: white;
+}
+
+form .linha button {
+    width: 273px;
+    height: 40px;
+    background-color: #F9AA01;
+    color: #1B1426;
+    border-radius: 8px;
+    font-size: 24px;
+    font-family: "TitiliumBold";
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/* COLUNAS */
+
+table {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 492px;
+}
+
+table thead {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #F9AA01;
+    padding-right: 50px;
+
+}
+
+table thead tr {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+table thead tr th {
+    text-transform: uppercase;
+    color: #F9AA01;
+    font-size: 20px;
+    font-family: "TitiliumBlack";
+    padding-right: 20px;
+
+}
+
+table tbody {
+    width: 100%;
+}
+
+.linha2 {
+    border: solid 1px transparent;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.8), rgb(60, 3, 65, 0.6)), radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 8px;
+    width: 336px;
+    height: 70px;
+}
+
+table tbody tr {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+table tbody tr td {
+    border-right: 2px solid #F9AA01;
+    font-size: 18px;
+    font-family: "TitiliumBold";
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-top: 15px;
+}
+
+table tbody tr td:last-of-type {
+    border-right: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-image: url(../assets/images/backgroung_footer\ mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1531px;
+    box-shadow: inset 0 50px 80px rgb(0, 0, 0, 0.9);
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+.logo-footer img {
+    width: 110px;
+    height: 32px;
+
+}
+
+.logo-footer p {
+    font-size: 14px;
+    font-family: "Quicksand";
+    line-height: 20px;
+    text-align: justify;
+}
+
+.icons-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-footer .icons-footer img {
+    width: 40px;
+    height: 40px;
+}
+
+h6 {
+    font-size: 30px;
+    font-family: "TitiliumBlack";
+    margin-top: 150px;
+}
+
+hr {
+    width: 102px;
+    border-bottom: 2px solid #F9AA01
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.links a {
+    padding: 0px 50px 20px 0px;
+    color: white;
+    text-decoration: none;
+}
+
+.links-uteis {
+    font-family: "TitiliumBold";
+}
+
+.footer-contatos {
+    font-family: "TitiliumBold";
+}
+
+.footer-contatos h5 {
+    color: #F9AA01;
+    font-size: 16px;
+    font-family: "TitiliumBold";
+    padding-top: 30px;
+}
+
+.linha-footer {
+    margin-top: 70px;
+    gap: 10px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.1));
+    width: 285px;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.linha-footer input {
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: "TitiliumRegular"
+}
+
+.linha-footer input::placeholder {
+    color: white;
+}
+
+.footer-news button {
+    width: 285px;
+    height: 40px;
+    background-color: #F9AA01;
+    color: #1B1426;
+    border-radius: 8px;
+    font-size: 24px;
+    font-family: "TitiliumBold";
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Desktop >= 1200px*/
+@media screen and (min-width: 1200px) {
+    .layout-grid {
+        width: 100%;
+        max-width: 1200px;
+
+    }
+
+    /* header */
+    header {
+        position: static;
+        height: 140px;
+    }
+
+    header .header-top {
+        display: block;
+        height: 50px;
+        border-bottom: 2px solid #F9AA01;
+
+    }
+
+    .header-top .contatos {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        width: 420px;
+        font-family: "Inter";
+        font-size: 14px;
+        font-weight: 400px;
+    }
+
+    header .header-top .contatos>a {
+        display: flex;
+        gap: 10px;
+        width: 200px;
+        align-items: center;
+    }
+
+    .header-top .midias-sociais {
+        display: flex;
+        justify-content: space-between;
+        width: 140px;
+    }
+
+    /* esconde os elementos desnecessários */
+    header .header-bottom .menu-hamburger,
+    header .header-bottom .menu-pontinhos,
+    header .header-bottom nav .phone,
+    header .header-bottom nav .mail,
+    header .header-bottom nav .midias-sociais {
+        display: none;
+    }
+
+    header .logo {
+        width: 200px;
+    }
+
+    header .header-bottom {
+        height: 90px;
+    }
+
+    header .header-bottom nav {
+        position: static;
+        width: 440px;
+        height: 50px;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 0;
+        justify-content: space-between;
+    }
+
+    header .header-bottom nav a {
+        font-size: 14px;
+        padding: 0;
+        border: none;
+    }
+
+    .header-bottom .menu-usuarios {
+        position: static;
+        width: 140px;
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+        background-color: transparent;
+        background-image: none;
+    }
+
+    /* MAIN */
+    main {
+        background-image: url(../assets/images/bannerjogaddesk.png);
+        margin-top: 0;
+        height: 1372px;
+        background-size: 100% 100%;
+    }
+
+    main form {
+        width: 800px;
+        height: 670px;
+    }
+
+    main form h1 {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    main form hr {
+        width: 448px;
+        margin-bottom: 77px;
+        font-size: 28px;
+    }
+
+    form .linha>div {
+        width: 565px;
+    }
+
+    .linha button {
+        width: 243px;
+        margin-left: calc(50% - 120px);
+    }
+
+    table thead tr th {
+        padding-right: 50px;
+        font-size: 30px;
+    }
+
+    .linha2 {
+        width: 100%;
+        height: 125px;
+    }
+
+    .linha2:last-of-type {
+        display: none;
+    }
+
+    table tbody tr td {
+        margin-top: 20px;
+        height: 80px;
+        padding-right: 70px;
+        font-size: 24px;
+    }
+
+    table tbody tr td img {
+        width: 80px;
+        height: 90px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        background-image: url(../assets/images/footerdesk.png);
+        height: 520px;
+    }
+
+    .footer-flex {
+        flex-direction: row;
+    }
+
+    .logo-footer {
+        margin: 100px 0;
+        align-items: flex-start;
+        width: 285px;
+
+    }
+
+    .logo-footer img {
+        width: 196px;
+        height: 56px;
+        margin-bottom: 30px;
+    }
+
+    .logo-footer p {
+        line-height: 25px;
+        font-size: 16px;
+    }
+
+    .icons-footer {
+        width: 206px;
+        margin-top: 20px;
+    }
+
+    h6 {
+        margin-top: 100px;
+    }
+
+    .links {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .footer-contatos,
+    .links-uteis,
+    .footer-news {
+        margin-left: 60px;
+    }
+}
